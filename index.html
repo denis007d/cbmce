@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap de Estudos - CBMCE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Paleta de cores inspirada no CBMCE
+                        'primary': '#D92329',         // Vermelho vibrante do brasão/faixa (para ações principais, títulos)
+                        'primary-dark': '#B31B20',    // Vermelho mais escuro para hover/active
+                        
+                        'secondary': '#F37021',       // Laranja vibrante do novo fardamento (para destaques, botões secundários)
+                        'secondary-dark': '#D45D17',  // Laranja mais escuro para hover/active
+
+                        'light': '#F9FAFB',           // Um branco suave para fundos principais da página
+                        'card-bg': '#FFFFFF',          // Branco puro para o fundo de cards e seções destacadas
+                        'dark': '#3A4047',            // Cinza escuro/chumbo (para texto principal, elementos escuros)
+                        'darker': '#2B2F33',          // Um tom ainda mais escuro para variações
+
+                        'success': '#007F42',         // Verde do escudo do brasão (para feedback positivo)
+                        'warning': '#FFC107',         // Amarelo/dourado da tocha (para alertas e avisos)
+                        'danger': '#C62828',          // Vermelho forte para ações destrutivas ou erros
+                        
+                        'info': '#4E5D6C',            // Cinza azulado do fundo do brasão (para informações, texto complementar)
+
+                        // Tons de cinza para elementos neutros
+                        'gray-text': '#5A6A7B',       // Cinza para texto secundário
+                        'gray-border': '#D1D5DB',     // Cinza claro para bordas, divisores
+                        'gray-hover': '#E5E7EB',      // Cinza para hover em elementos claros
+                    },
+                    fontFamily: {
+                        // Fonte definida anteriormente
+                        sans: ['Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+                    },
+                }
+            },
+            // plugins: [], // Se não estiver usando um build com Node.js, mantenha vazio ou remova.
+        }
+    </script>
+    <style>
+        /* Estilo para a barra de rolagem (opcional, mas melhora a estética) */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Pode usar 'gray-hover' da paleta */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888; /* Pode usar 'gray-text' ou 'info' da paleta */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Um tom mais escuro do thumb */
+        }
+    </style>
+</head>
+<body class="bg-light text-dark min-h-screen font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <header class="mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+                <div class="flex items-center gap-3">
+                    <img src="https://www.bombeiros.ce.gov.br/wp-content/uploads/sites/27/2021/02/emblema-cbmce-2019-1.png" alt="Brasão CBMCE" class="h-12 md:h-16">
+                    <h1 class="text-2xl md:text-3xl font-bold text-primary">Roadmap de Estudos CBMCE</h1>
+                </div>
+                <div class="w-full md:w-1/3">
+                    <input type="text" id="searchInput" placeholder="Buscar tópicos..." class="w-full px-4 py-2 rounded-lg border border-gray-border focus:outline-none focus:ring-2 focus:ring-primary text-sm">
+                </div>
+            </div>
+            
+            <div class="bg-card-bg rounded-lg shadow-md p-4 mb-6">
+                <h2 class="text-xl font-semibold mb-3 text-dark">Progresso Geral</h2>
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+                    <div class="flex gap-6 md:gap-8">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-dark" id="completedTopics">0</div>
+                            <div class="text-sm text-gray-text">Concluídos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-dark" id="totalTopics">0</div>
+                            <div class="text-sm text-gray-text">Total</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary" id="progressPercentage">0%</div>
+                        <div class="text-sm text-gray-text">Progresso</div>
+                    </div>
+                </div>
+                <div class="w-full bg-gray-hover rounded-full h-3">
+                    <div class="bg-primary h-full rounded-full transition-all duration-500" id="progressBar" style="width: 0%"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="bg-card-bg rounded-lg shadow-md p-4 mb-6">
+            <h2 class="text-xl font-semibold mb-3 text-dark">Cronômetro de Estudos (Pomodoro)</h2>
+            <div class="text-5xl md:text-6xl font-mono text-center my-4 text-secondary" id="timer">00:00</div>
+            <div class="flex flex-wrap justify-center items-center gap-3">
+                <button class="bg-success hover:opacity-80 text-white px-4 py-2 rounded-lg transition text-sm font-medium" id="startTimer">Iniciar (25 min)</button>
+                <button class="bg-info hover:opacity-80 text-white px-3 py-1 rounded-lg transition text-xs" id="shortBreakTimer">Pausa Curta (5 min)</button>
+                <button class="bg-info hover:opacity-80 text-white px-3 py-1 rounded-lg transition text-xs" id="longBreakTimer">Pausa Longa (15 min)</button>
+                <button class="bg-secondary hover:bg-secondary-dark text-white px-4 py-2 rounded-lg transition disabled:opacity-50 text-sm font-medium" id="pauseTimer" disabled>Pausar</button>
+                <button class="bg-danger hover:opacity-80 text-white px-4 py-2 rounded-lg transition text-sm font-medium" id="resetTimer">Resetar</button>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2 mb-6 pb-2 border-b border-gray-border">
+            <span class="text-sm font-medium text-gray-text self-center mr-2">Filtrar por:</span>
+            <button class="filter-tab bg-primary text-white px-3 py-1.5 rounded-md text-xs font-medium transition" data-filter="all">Todos</button>
+            <button class="filter-tab bg-gray-border hover:bg-gray-hover px-3 py-1.5 rounded-md text-xs font-medium text-dark transition" data-filter="completed">Concluídos</button>
+            <button class="filter-tab bg-gray-border hover:bg-gray-hover px-3 py-1.5 rounded-md text-xs font-medium text-dark transition" data-filter="pending">Pendentes</button>
+            <button class="filter-tab bg-gray-border hover:bg-gray-hover px-3 py-1.5 rounded-md text-xs font-medium text-dark transition" data-filter="module-1">Módulo I</button>
+            <button class="filter-tab bg-gray-border hover:bg-gray-hover px-3 py-1.5 rounded-md text-xs font-medium text-dark transition" data-filter="module-2">Módulo II</button>
+            </div>
+
+        <div id="modulesContainer" class="space-y-6">
+            </div>
+
+        <footer class="text-center mt-12 py-4 border-t border-gray-border">
+            <p class="text-xs text-gray-text">&copy; <span id="currentYear"></span> Roadmap de Estudos. Desenvolvido para auxiliar na sua preparação.</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
