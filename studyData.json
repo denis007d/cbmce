@@ -1,0 +1,227 @@
+{
+    "modules": [
+        {
+            "id": "module-1",
+            "title": "MÓDULO I – CONHECIMENTOS BÁSICOS",
+            "subjects": [
+                {
+                    "id": "portugues",
+                    "title": "LÍNGUA PORTUGUESA / INTERPRETAÇÃO DE TEXTOS",
+                    "topics": [
+                        "Compreensão e interpretação de textos",
+                        "Reconhecimento de tipos e gêneros textuais",
+                        "Ortografia oficial",
+                        "Acentuação gráfica",
+                        "Emprego das classes de palavras",
+                        "Emprego/correlação de tempos e modos verbais",
+                        "Emprego do sinal indicativo de crase",
+                        "Sintaxe da oração e do período",
+                        "Sinais de pontuação",
+                        "Concordância nominal e verbal",
+                        "Regência nominal e verbal",
+                        "Significação das palavras",
+                        "Comunicações oficiais: o padrão ofício e tipos de documentos"
+                    ]
+                },
+                {
+                    "id": "matematica",
+                    "title": "MATEMÁTICA / RACIOCÍNIO LÓGICO",
+                    "topics": [
+                        "Operações com números naturais, inteiros, racionais, irracionais e reais",
+                        "Problemas de contagem",
+                        "Sistema legal de medidas (medidas de comprimento, área, massa e volume)",
+                        "Razões e proporções; divisão proporcional",
+                        "Regras de três simples e composta",
+                        "Porcentagens",
+                        "Equações e inequações de 1º e 2º graus",
+                        "Sistemas lineares",
+                        "Funções do 1º e 2º grau",
+                        "Gráficos",
+                        "Sequências numéricas",
+                        "Progressão aritmética e geométrica",
+                        "Noções de probabilidade e estatística",
+                        "Raciocínio lógico: raciocínio lógico envolvendo problemas aritméticos e geométricos",
+                        "Compreensão e análise da lógica de uma situação",
+                        "Operações com conjuntos",
+                        "Geometria plana"
+                    ]
+                },
+                {
+                    "id": "atualidades",
+                    "title": "ATUALIDADES / HISTÓRIA DO CEARÁ",
+                    "topics": [
+                        "Fatos de interesse e/ou notoriedade internacional, nacional e estadual",
+                        "O período colonial: a ocupação do território",
+                        "O período imperial: o Ceará na Confederação do Equador",
+                        "O Ceará e a 'República Velha': a política oligárquica",
+                        "O período de 1930 a 1964: o Ceará durante o Estado-Novo",
+                        "Os governos militares e o 'novo' coronelismo",
+                        "A 'nova' República: os 'governos das mudanças'"
+                    ]
+                },
+                {
+                    "id": "administracao",
+                    "title": "NOÇÕES DE ADMINISTRAÇÃO PÚBLICA / ÉTICA NO SERVIÇO PÚBLICO",
+                    "topics": [
+                        "Características básicas das organizações formais modernas",
+                        "Organização administrativa: centralização, descentralização, concentração e desconcentração",
+                        "Princípios da Administração Pública",
+                        "Poderes administrativos",
+                        "Participação, proteção e defesa dos direitos do usuário dos serviços públicos",
+                        "Relações humanas no trabalho",
+                        "Ética e cidadania",
+                        "Lei de Improbidade Administrativa"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "module-2",
+            "title": "MÓDULO II – CONHECIMENTOS ESPECÍFICOS",
+            "subjects": [
+                {
+                    "id": "legislacao",
+                    "title": "LEGISLAÇÃO PERTINENTE AO CBMCE",
+                    "topics": [
+                        "Lei Estadual nº 13.407 (Código Disciplinar da PMCE e do CBMCE)",
+                        "Lei Estadual nº 13.556 (Segurança Contra Incêndios)",
+                        "Lei Estadual nº 13.729 (Estatuto dos Militares Estaduais do Ceará)",
+                        "Lei Estadual nº 15.797 (Promoções dos militares estaduais)",
+                        "Decreto Estadual nº 31.804 (Regulamento das promoções dos militares estaduais)"
+                    ]
+                },
+                {
+                    "id": "direito-constitucional",
+                    "title": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+                    "topics": [
+                        "Direito Constitucional: natureza, conceito e objeto; fontes formais",
+                        "Constituição: conceito, classificação e objeto",
+                        "Poder Constituinte",
+                        "Princípios fundamentais",
+                        "Sujeitos dos direitos fundamentais",
+                        "Classificação dos direitos fundamentais",
+                        "Direitos e garantias fundamentais",
+                        "Limites e restrições aos direitos fundamentais",
+                        "Ações constitucionais",
+                        "Poder Executivo: forma e sistema de governo",
+                        "Poder Legislativo",
+                        "Poder Judiciário",
+                        "Funções essenciais à Justiça",
+                        "Segurança Pública: conceito e órgãos"
+                    ]
+                },
+                {
+                    "id": "direito-penal",
+                    "title": "NOÇÕES DE DIREITO PENAL MILITAR / PROCESSUAL PENAL MILITAR",
+                    "topics": [
+                        "Aplicação da lei penal militar",
+                        "Crime militar",
+                        "Imputabilidade penal",
+                        "Concurso de agentes",
+                        "Penas: penas principais",
+                        "Extinção da punibilidade",
+                        "Crimes militares em tempo de paz",
+                        "Aplicação da Lei Processual Penal",
+                        "Polícia Judiciária Militar",
+                        "Inquérito Policial Militar"
+                    ]
+                },
+                {
+                    "id": "fisica",
+                    "title": "FÍSICA",
+                    "topics": [
+                        "Sistema Internacional de Unidades",
+                        "Mecânica",
+                        "Cinemática escalar",
+                        "Cinemática vetorial",
+                        "Movimento circular",
+                        "Leis de Newton e suas aplicações",
+                        "Trabalho, potência, energia, conservação e suas transformações",
+                        "Estática dos corpos rígidos",
+                        "Noções de hidráulica",
+                        "Estática dos fluidos",
+                        "Princípios de Pascal, Arquimedes e Stevin",
+                        "Termologia e termodinâmica",
+                        "Escalas termométricas",
+                        "Processos de transmissão de calor",
+                        "Calorimetria e mudança de estado físico",
+                        "Dilatação térmica dos sólidos e dos líquidos",
+                        "Princípios da termodinâmica",
+                        "Entropia e entalpia",
+                        "Eletromagnetismo",
+                        "Introdução à eletricidade",
+                        "Corrente elétrica, tensão e resistência",
+                        "Lei de Ohm",
+                        "Efeito Joule",
+                        "Propriedades elétricas e magnéticas dos materiais"
+                    ]
+                },
+                {
+                    "id": "quimica",
+                    "title": "QUÍMICA",
+                    "topics": [
+                        "Classificação periódica dos elementos químicos",
+                        "Classificação dos elementos em metais, não metais, semimetais e gases nobres",
+                        "Propriedades periódicas e aperiódicas",
+                        "Noções de Radioatividade",
+                        "Natureza das emissões radioativas",
+                        "Fenômenos de fissão nuclear e fusão nuclear",
+                        "Riscos e aplicações das reações nucleares",
+                        "Ligações químicas",
+                        "Ligações iônica, covalente e metálica",
+                        "Ligações intra e intermoleculares",
+                        "Métodos de separação de misturas",
+                        "Gases ideais",
+                        "Leis dos gases",
+                        "Termoquímica",
+                        "Reações exotérmicas e endotérmicas",
+                        "Entalpia, entropia e energia livre",
+                        "Espontaneidade de uma reação",
+                        "Noções de Eletroquímica",
+                        "Potenciais de oxidação e redução",
+                        "Espontaneidade de uma reação de oxirredução",
+                        "Pilhas",
+                        "Eletrólise",
+                        "Corrosão",
+                        "Funções inorgânicas: Ácidos, Bases, Sais e Óxidos",
+                        "Soluções: Unidades de concentração"
+                    ]
+                },
+                {
+                    "id": "biologia",
+                    "title": "BIOLOGIA / PRIMEIROS SOCORROS",
+                    "topics": [
+                        "Noções de Anatomia e Fisiologia humana",
+                        "Posição anatômica",
+                        "Divisões do corpo humano",
+                        "Quadrantes abdominais (órgãos)",
+                        "Sistema tegumentar: pele, pelos, unhas",
+                        "Sistema esquelético: funções, divisão anatômica do esqueleto",
+                        "Sistema Muscular: funções, tipos de músculo",
+                        "Sistema respiratório: função, respiração, órgãos componentes",
+                        "Sistema cardiovascular: principais funções, sangue, coração",
+                        "Sistema geniturinário: funções e componentes do sistema urinário",
+                        "Sistema digestório: funções e componentes",
+                        "Sistema nervoso: função, divisão, meninges",
+                        "Noções de Hemorragia e choque",
+                        "Hemorragia: classificação clínica, classificação anatômica, técnicas utilizadas no controle das hemorragias",
+                        "Estado de choque: conceito, causas, tipos de choque, sinais e sintomas gerais do choque",
+                        "Trauma em extremidades: Fratura, Luxação, Entorse",
+                        "Noções de Traumatismos: lesões de crânio, coluna e tórax",
+                        "Fraturas de crânio abertas e fechadas",
+                        "Lesões encefálicas, concussão e contusão",
+                        "Sinais e sintomas do trauma cranioencefálico (TCE)",
+                        "Traumatismos de face: sinais e sintomas",
+                        "Traumatismos de coluna: sinais e sintomas",
+                        "Traumatismos de tórax: Pneumotórax, Tórax instável, Ruptura aórtica, Hemotórax",
+                        "Ferimentos penetrantes",
+                        "Objetos cravados e encravados",
+                        "Queimaduras: Classificação, sinais e sintomas, classificação de acordo com sua extensão, gravidade das queimaduras, queimaduras químicas, queimaduras elétricas",
+                        "Parada Cardiorrespiratória: definição, tipos, sintomas",
+                        "Equipamentos de proteção individual no Atendimento Pré-Hospitalar"
+                    ]
+                }
+            ]
+        }
+    ]
+}
